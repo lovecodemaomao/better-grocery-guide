@@ -1,0 +1,23 @@
+name: 内容纠错
+description: 指出一条需要复核的采购建议
+title: "[纠错] "
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 页面链接或文件
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: 哪句话有问题，为什么？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 来源链接、发布日期和适用范围
+    validations:
+      required: true

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "零售价格观察记录（第二阶段使用）",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["observedAt", "city", "channel", "product", "specification", "netWeightKg", "paidCny", "shippingCny", "discountCny", "sourceUrl", "priceType"],
+  "properties": {
+    "observedAt": { "type": "string", "format": "date-time" },
+    "city": { "type": "string", "minLength": 1 },
+    "channel": { "type": "string", "minLength": 1 },
+    "seller": { "type": "string" },
+    "product": { "type": "string", "minLength": 1 },
+    "variety": { "type": "string" },
+    "specification": { "type": "string", "minLength": 1 },
+    "netWeightKg": { "type": "number", "exclusiveMinimum": 0 },
+    "paidCny": { "type": "number", "minimum": 0 },
+    "shippingCny": { "type": "number", "minimum": 0 },
+    "discountCny": { "type": "number", "minimum": 0 },
+    "sourceUrl": { "type": "string", "format": "uri" },
+    "priceType": { "const": "consumer-retail" },
+    "note": { "type": "string" }
+  }
+}

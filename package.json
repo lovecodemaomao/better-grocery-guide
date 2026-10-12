@@ -1,0 +1,19 @@
+{
+  "name": "better-grocery-guide",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "calendar": "node scripts/generate-calendar.mjs",
+    "calendar:check": "node scripts/generate-calendar.mjs --check",
+    "check": "node scripts/check-content.mjs && npm run calendar:check && vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "npm run calendar && vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "overrides": {
+    "vite": "^6.4.4"
+  }
+}

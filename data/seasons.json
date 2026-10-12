@@ -1,0 +1,461 @@
+[
+  {
+    "slug": "citrus",
+    "product": "柑橘",
+    "variety": "贡柑、脐橙等",
+    "origin": "各主产区",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [
+      12
+    ],
+    "supplyMonths": [
+      1
+    ],
+    "evidenceYear": 2024,
+    "sourceIds": [
+      "moa_2025_jan"
+    ],
+    "note": "报告记载 12 月柑橘进入集中供应期，后期贡柑、脐橙供应较多；1 月仅作供应参考。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "1": [
+        "moa_2025_jan"
+      ],
+      "12": [
+        "moa_2025_jan"
+      ]
+    }
+  },
+  {
+    "slug": "banana",
+    "product": "香蕉",
+    "variety": "云南、广西产区香蕉",
+    "origin": "云南、广西",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      12,
+      1
+    ],
+    "evidenceYear": 2024,
+    "sourceIds": [
+      "moa_2025_jan"
+    ],
+    "note": "12 月产区大量上市；1 月作为后期供应观察，不代表全年固定产季。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "1": [
+        "moa_2025_jan"
+      ],
+      "12": [
+        "moa_2025_jan"
+      ]
+    }
+  },
+  {
+    "slug": "strawberry",
+    "product": "草莓",
+    "variety": "设施草莓",
+    "origin": "未限定",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      1,
+      2,
+      3
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_jan",
+      "moa_2025_mar"
+    ],
+    "note": "1 月报告列为特色水果；2 月报告预计设施草莓供应增大。3 月为后期预测，需按当地实际核对。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "1": [
+        "moa_2025_jan"
+      ],
+      "2": [
+        "moa_2025_mar"
+      ],
+      "3": [
+        "moa_2025_mar"
+      ]
+    }
+  },
+  {
+    "slug": "citrus",
+    "product": "柑橘",
+    "variety": "国内柑橘（未细分）",
+    "origin": "各主产区",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [
+      2
+    ],
+    "supplyMonths": [
+      3
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_may"
+    ],
+    "note": "2 月国内柑橘集中大量上市；3 月为后期供应参考，品种差异很大。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "2": [
+        "moa_2025_may"
+      ],
+      "3": [
+        "moa_2025_may"
+      ]
+    }
+  },
+  {
+    "slug": "apple",
+    "product": "苹果",
+    "variety": "库存苹果",
+    "origin": "北方等主产区",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_jan",
+      "moa_2025_mar",
+      "moa_2025_may"
+    ],
+    "note": "这些月份主要是库存供应，不能写作自然成熟期。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "1": [
+        "moa_2025_jan"
+      ],
+      "2": [
+        "moa_2025_mar"
+      ],
+      "3": [
+        "moa_2025_mar"
+      ],
+      "4": [
+        "moa_2025_may"
+      ],
+      "5": [
+        "moa_2025_may"
+      ]
+    }
+  },
+  {
+    "slug": "banana",
+    "product": "香蕉",
+    "variety": "海南香蕉",
+    "origin": "海南",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [
+      6
+    ],
+    "supplyMonths": [
+      5,
+      7
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_may",
+      "moa_2025_jul"
+    ],
+    "note": "报告提及产区从云南转向广东、海南及海南采收高峰；月份为 2025 年观察。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "5": [
+        "moa_2025_may"
+      ],
+      "6": [
+        "moa_2025_jul"
+      ],
+      "7": [
+        "moa_2025_jul"
+      ]
+    }
+  },
+  {
+    "slug": "cherry",
+    "product": "樱桃",
+    "variety": "国产樱桃",
+    "origin": "未限定",
+    "region": "全国市场预测",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      4,
+      5
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_may"
+    ],
+    "note": "月报预计随气温上升逐渐上市，具体地区与设施栽培会改变时间。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "4": [
+        "moa_2025_may"
+      ],
+      "5": [
+        "moa_2025_may"
+      ]
+    }
+  },
+  {
+    "slug": "watermelon",
+    "product": "西瓜",
+    "variety": "国产西瓜",
+    "origin": "北方及其他产区",
+    "region": "全国市场观察与预测",
+    "matureMonths": [],
+    "peakMonths": [
+      6,
+      7
+    ],
+    "supplyMonths": [
+      4,
+      5,
+      8,
+      9
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_may",
+      "moa_2025_jul",
+      "moa_2025_sep",
+      "moa_2025_oct"
+    ],
+    "note": "春季上市、初夏供应增加；秋季北方产区逐步收尾。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "4": [
+        "moa_2025_may"
+      ],
+      "5": [
+        "moa_2025_may"
+      ],
+      "6": [
+        "moa_2025_jul"
+      ],
+      "7": [
+        "moa_2025_jul"
+      ],
+      "8": [
+        "moa_2025_sep"
+      ],
+      "9": [
+        "moa_2025_oct"
+      ]
+    }
+  },
+  {
+    "slug": "peach",
+    "product": "桃",
+    "variety": "国产桃",
+    "origin": "未限定",
+    "region": "全国市场观察与预测",
+    "matureMonths": [],
+    "peakMonths": [
+      6,
+      7
+    ],
+    "supplyMonths": [
+      5
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_may",
+      "moa_2025_jul"
+    ],
+    "note": "春末开始上市、夏季供应增多；品种与产地差异未在此细分。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "5": [
+        "moa_2025_may"
+      ],
+      "6": [
+        "moa_2025_jul"
+      ],
+      "7": [
+        "moa_2025_jul"
+      ]
+    }
+  },
+  {
+    "slug": "grape",
+    "product": "葡萄",
+    "variety": "国产鲜食葡萄",
+    "origin": "各产区",
+    "region": "全国市场观察与预测",
+    "matureMonths": [],
+    "peakMonths": [
+      7,
+      8,
+      9
+    ],
+    "supplyMonths": [
+      5,
+      6
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_may",
+      "moa_2025_jul",
+      "moa_2025_sep",
+      "moa_2025_oct"
+    ],
+    "note": "春末陆续上市，夏季供应增加，9 月有晚熟葡萄集中上市。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "5": [
+        "moa_2025_may"
+      ],
+      "6": [
+        "moa_2025_jul"
+      ],
+      "7": [
+        "moa_2025_jul"
+      ],
+      "8": [
+        "moa_2025_sep"
+      ],
+      "9": [
+        "moa_2025_oct"
+      ]
+    }
+  },
+  {
+    "slug": "pear",
+    "product": "梨",
+    "variety": "早熟梨与库存梨",
+    "origin": "各产区",
+    "region": "全国市场观察与预测",
+    "matureMonths": [],
+    "peakMonths": [
+      7
+    ],
+    "supplyMonths": [
+      1,
+      2,
+      4,
+      5,
+      10,
+      11,
+      12
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_jan",
+      "moa_2025_mar",
+      "moa_2025_may",
+      "moa_2025_jul",
+      "moa_2025_nov"
+    ],
+    "note": "7 月新季早熟梨上市；其他月份多为库存或市场供应，不能看成同一品种成熟期。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "1": [
+        "moa_2025_jan"
+      ],
+      "2": [
+        "moa_2025_mar"
+      ],
+      "4": [
+        "moa_2025_may"
+      ],
+      "5": [
+        "moa_2025_may"
+      ],
+      "7": [
+        "moa_2025_jul"
+      ],
+      "10": [
+        "moa_2025_nov"
+      ],
+      "11": [
+        "moa_2025_nov"
+      ],
+      "12": [
+        "moa_2025_jan"
+      ]
+    }
+  },
+  {
+    "slug": "apple",
+    "product": "苹果",
+    "variety": "富士等晚熟苹果",
+    "origin": "北方主产区",
+    "region": "全国市场观察",
+    "matureMonths": [
+      10
+    ],
+    "peakMonths": [
+      10
+    ],
+    "supplyMonths": [
+      9
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_sep",
+      "moa_2025_nov"
+    ],
+    "note": "10 月富士采摘，9 月有早中熟苹果供应；年份天气会使采收延迟。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "9": [
+        "moa_2025_sep"
+      ],
+      "10": [
+        "moa_2025_nov"
+      ]
+    }
+  },
+  {
+    "slug": "citrus",
+    "product": "柑橘",
+    "variety": "蜜桔、柚子等",
+    "origin": "各主产区",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [
+      10
+    ],
+    "supplyMonths": [
+      9,
+      11
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_sep",
+      "moa_2025_nov"
+    ],
+    "note": "秋季供给增加，10 月产销活跃；具体品种成熟月不同。",
+    "reviewedAt": "2026-10-12",
+    "sourceIdsByMonth": {
+      "9": [
+        "moa_2025_sep"
+      ],
+      "10": [
+        "moa_2025_nov"
+      ],
+      "11": [
+        "moa_2025_nov"
+      ]
+    }
+  }
+]

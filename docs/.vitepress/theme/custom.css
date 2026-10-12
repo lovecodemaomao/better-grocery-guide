@@ -1,0 +1,4 @@
+:root { --vp-c-brand-1: #246b4b; --vp-c-brand-2: #34855f; --vp-c-brand-3: #1b5a3d; }
+.month-card { margin: 2rem 0; padding: 1.25rem 1.5rem; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.month-card p { margin: .5rem 0; }
+.month-card a { font-weight: 600; }
