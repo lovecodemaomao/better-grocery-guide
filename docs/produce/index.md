@@ -12,6 +12,8 @@
 
 [樱桃](./cherry) · [西瓜](./watermelon) · [桃](./peach) · [葡萄](./grape) · [梨](./pear)
 
+[荔枝](./lychee) · [芒果](./mango) · [杏](./apricot) · [甜瓜](./melon) · [猕猴桃](./kiwi)
+
 ## 其他蔬菜样板
 
 [马铃薯](./potato) · [黄瓜](./cucumber) · [栽培食用菌](./mushrooms)

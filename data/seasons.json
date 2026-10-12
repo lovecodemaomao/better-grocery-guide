@@ -453,5 +453,120 @@
         "moa_2025_nov"
       ]
     }
+  },
+  {
+    "slug": "lychee",
+    "product": "荔枝",
+    "variety": "桂味、糯米糍等中晚熟品种",
+    "origin": "国内荔枝主产区",
+    "region": "全国市场预测；南方产区先后不同",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      6
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_jun"
+    ],
+    "note": "2025 年 5 月月报预计中晚熟荔枝随后大量上市；6 月是当年预测线索，并非固定集中上市月。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "6": [
+        "moa_2025_jun"
+      ]
+    }
+  },
+  {
+    "slug": "mango",
+    "product": "芒果",
+    "variety": "国产鲜食芒果（未细分）",
+    "origin": "未限定",
+    "region": "全国市场预测；品种及产区待细分",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      6
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_jun"
+    ],
+    "note": "月报预计夏季鲜果中芒果大量上市，不能据此推断各产区采收月。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "6": [
+        "moa_2025_jun"
+      ]
+    }
+  },
+  {
+    "slug": "apricot",
+    "product": "杏",
+    "variety": "国产鲜食杏（未细分）",
+    "origin": "未限定",
+    "region": "全国市场预测；产区待细分",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      6
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_jun"
+    ],
+    "note": "月报预计夏季鲜果中杏大量上市；天气、品种与产地会改变上市时间。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "6": [
+        "moa_2025_jun"
+      ]
+    }
+  },
+  {
+    "slug": "melon",
+    "product": "甜瓜",
+    "variety": "国产鲜食甜瓜（未细分）",
+    "origin": "未限定",
+    "region": "全国市场预测；设施与露地需分开核实",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      6
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_jun"
+    ],
+    "note": "月报预计夏季鲜果中甜瓜大量上市；此处不包含西瓜，也不推断具体品种采收期。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "6": [
+        "moa_2025_jun"
+      ]
+    }
+  },
+  {
+    "slug": "kiwi",
+    "product": "猕猴桃",
+    "variety": "国产猕猴桃（未细分）",
+    "origin": "各产区",
+    "region": "全国市场预测；成熟度及后熟方式有差异",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      9
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_sep"
+    ],
+    "note": "8 月月报预计入秋后供给增加、上市量逐步增加；9 月作为后续供应线索。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "9": [
+        "moa_2025_sep"
+      ]
+    }
   }
 ]
