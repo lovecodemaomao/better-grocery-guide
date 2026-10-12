@@ -10,6 +10,9 @@ hero:
       text: 看本月采购线索
       link: /calendar/
     - theme: alt
+      text: 比较零售价格
+      link: /compare/
+    - theme: alt
       text: 查商品
       link: /produce/
 features:
@@ -21,13 +24,13 @@ features:
     link: /produce/
   - title: 算到手成本
     details: 把运费、损耗和可食用部分算进去。
-    link: /value/
+    link: /compare/
 ---
 
 <CurrentMonth />
 
 ## 开始阅读
 
-首批已核实的样板包括[苹果](/produce/apple)、[香蕉](/produce/banana)、[柑橘](/produce/citrus)、[草莓](/produce/strawberry)、[番茄](/produce/tomato)和[叶菜](/produce/leafy-greens)。也可以用页面右上角搜索商品名称或别名。
+先看[十二个月水果与蔬菜线索](/calendar/)，再用[零售比价](/compare/)比较同城同规格的到手价格。也可以用页面右上角搜索商品名称或别名。
 
 日历依据有日期的公开资料整理，**不是当年即时供应或价格承诺**。若某项尚无足够证据，会标出待核实。[阅读方法](/about) · [参与纠错](/contributing)

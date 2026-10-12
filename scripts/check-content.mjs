@@ -10,6 +10,7 @@ for (const [id, source] of Object.entries(sources)) {
 }
 for (const [index, row] of seasons.entries()) {
   for (const key of ['slug', 'product', 'variety', 'origin', 'region', 'evidenceYear', 'note', 'reviewedAt']) if (!row[key]) errors.push(`季节条目 ${index} 缺少 ${key}`)
+  if (!['fruit', 'vegetable'].includes(row.category)) errors.push(`季节条目 ${index} 的 category 无效`)
   for (const key of ['matureMonths', 'peakMonths', 'supplyMonths']) if (!Array.isArray(row[key]) || !row[key].every(validMonth)) errors.push(`季节条目 ${index} 的 ${key} 无效`)
   if (![...row.matureMonths, ...row.peakMonths, ...row.supplyMonths].length) errors.push(`季节条目 ${index} 没有月份`)
   for (const id of row.sourceIds ?? []) if (!sources[id]) errors.push(`季节条目 ${index} 引用未知来源 ${id}`)
@@ -19,6 +20,11 @@ for (const [index, row] of seasons.entries()) {
     else for (const id of monthIds) if (!sources[id]) errors.push(`季节条目 ${index} 的 ${month} 月引用未知来源 ${id}`)
   }
   if (!existsSync(resolve(`docs/produce/${row.slug}.md`))) errors.push(`季节条目 ${index} 缺少商品页 ${row.slug}`)
+}
+for (let month = 1; month <= 12; month++) {
+  for (const category of ['fruit', 'vegetable']) {
+    if (!seasons.some(row => row.category === category && [...row.matureMonths, ...row.peakMonths, ...row.supplyMonths].includes(month))) errors.push(`${month} 月缺少${category === 'fruit' ? '水果' : '蔬菜'}线索`)
+  }
 }
 function walk(dir) {
   for (const item of readdirSync(dir, { withFileTypes: true })) {

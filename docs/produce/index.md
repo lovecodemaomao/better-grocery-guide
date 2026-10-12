@@ -18,6 +18,6 @@
 
 ## 其他蔬菜样板
 
-[马铃薯](./potato) · [黄瓜](./cucumber) · [栽培食用菌](./mushrooms)
+[马铃薯](./potato) · [黄瓜](./cucumber) · [大白菜](./cabbage) · [白萝卜](./radish) · [菜花](./cauliflower) · [栽培食用菌](./mushrooms)
 
 这些关联页目前只提供已证实的采购线索，尚未达到完整商品指南的深度。

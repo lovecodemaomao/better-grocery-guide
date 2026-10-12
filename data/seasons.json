@@ -25,7 +25,8 @@
       "12": [
         "moa_2025_jan"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "banana",
@@ -52,7 +53,8 @@
       "12": [
         "moa_2025_jan"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "strawberry",
@@ -84,7 +86,8 @@
       "3": [
         "moa_2025_mar"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "citrus",
@@ -112,7 +115,8 @@
       "3": [
         "moa_2025_may"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "apple",
@@ -153,7 +157,8 @@
       "5": [
         "moa_2025_may"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "banana",
@@ -186,7 +191,8 @@
       "7": [
         "moa_2025_jul"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "cherry",
@@ -213,7 +219,8 @@
       "5": [
         "moa_2025_may"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "watermelon",
@@ -260,7 +267,8 @@
       "9": [
         "moa_2025_oct"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "peach",
@@ -293,7 +301,8 @@
       "7": [
         "moa_2025_jul"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "grape",
@@ -336,7 +345,8 @@
       "9": [
         "moa_2025_oct"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "pear",
@@ -388,7 +398,8 @@
       "11": [
         "moa_2025_nov"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "apple",
@@ -419,7 +430,8 @@
       "10": [
         "moa_2025_nov"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "citrus",
@@ -452,7 +464,8 @@
       "11": [
         "moa_2025_nov"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "lychee",
@@ -475,7 +488,8 @@
       "6": [
         "moa_2025_jun"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "mango",
@@ -498,7 +512,8 @@
       "6": [
         "moa_2025_jun"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "apricot",
@@ -521,7 +536,8 @@
       "6": [
         "moa_2025_jun"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "melon",
@@ -544,7 +560,8 @@
       "6": [
         "moa_2025_jun"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "kiwi",
@@ -567,7 +584,8 @@
       "9": [
         "moa_2025_sep"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "apple",
@@ -590,7 +608,8 @@
       "8": [
         "moa_2025_aug"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "melon",
@@ -613,7 +632,8 @@
       "8": [
         "moa_2025_aug"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "plum",
@@ -636,7 +656,8 @@
       "8": [
         "moa_2025_aug"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "winter-jujube",
@@ -659,7 +680,8 @@
       "8": [
         "moa_2025_aug"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "apple",
@@ -682,7 +704,8 @@
       "11": [
         "moa_2025_nov"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "banana",
@@ -705,7 +728,8 @@
       "11": [
         "moa_2025_nov"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "apple",
@@ -728,7 +752,8 @@
       "12": [
         "moa_2026_jan"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "pear",
@@ -751,7 +776,8 @@
       "12": [
         "moa_2026_jan"
       ]
-    }
+    },
+    "category": "fruit"
   },
   {
     "slug": "strawberry",
@@ -774,6 +800,339 @@
       "12": [
         "moa_2026_jan"
       ]
-    }
+    },
+    "category": "fruit"
+  },
+  {
+    "slug": "cabbage",
+    "product": "大白菜",
+    "variety": "冬春大白菜及冷棚白菜",
+    "origin": "湖北、黄河中下游等",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [
+      12
+    ],
+    "supplyMonths": [
+      1,
+      2,
+      3,
+      10,
+      11
+    ],
+    "evidenceYear": "2024—2025",
+    "sourceIds": [
+      "moa_2025_feb_veg",
+      "moa_2025_mar",
+      "moa_2025_apr_detail",
+      "moa_2025_nov",
+      "moa_2025_nov_cabbage",
+      "moa_2025_jan"
+    ],
+    "note": "12 月为 2024 年观察到的上市高峰；其余月份是不同产地或方式的历史供应记录。11 月 2025 年受天气影响，不能推作低价。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "1": [
+        "moa_2025_feb_veg"
+      ],
+      "2": [
+        "moa_2025_mar"
+      ],
+      "3": [
+        "moa_2025_apr_detail"
+      ],
+      "10": [
+        "moa_2025_nov"
+      ],
+      "11": [
+        "moa_2025_nov_cabbage"
+      ],
+      "12": [
+        "moa_2025_jan"
+      ]
+    },
+    "category": "vegetable"
+  },
+  {
+    "slug": "radish",
+    "product": "白萝卜",
+    "variety": "白萝卜及冷凉产区萝卜",
+    "origin": "黄河中下游、冷凉地区等",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [
+      12
+    ],
+    "supplyMonths": [
+      1,
+      7,
+      8
+    ],
+    "evidenceYear": "2024—2025",
+    "sourceIds": [
+      "moa_2025_feb_veg",
+      "moa_2025_aug",
+      "moa_2025_sep_detail",
+      "moa_2025_jan"
+    ],
+    "note": "12 月为 2024 年上市高峰；7 月扩种与 8 月晚茬雨害均为 2025 年个别产区观察，不代表全国统一季节。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "1": [
+        "moa_2025_feb_veg"
+      ],
+      "7": [
+        "moa_2025_aug"
+      ],
+      "8": [
+        "moa_2025_sep_detail"
+      ],
+      "12": [
+        "moa_2025_jan"
+      ]
+    },
+    "category": "vegetable"
+  },
+  {
+    "slug": "cauliflower",
+    "product": "菜花",
+    "variety": "普通菜花",
+    "origin": "浙江、福建、云南、江苏等",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [
+      12
+    ],
+    "supplyMonths": [
+      3,
+      4,
+      10
+    ],
+    "evidenceYear": "2024—2025",
+    "sourceIds": [
+      "moa_2025_mar_detail",
+      "moa_2025_apr_detail",
+      "moa_2025_nov",
+      "moa_2025_jan"
+    ],
+    "note": "12 月为 2024 年上市高峰；春季和 10 月为 2025 年产地转换与市场供应记录。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "3": [
+        "moa_2025_mar_detail"
+      ],
+      "4": [
+        "moa_2025_apr_detail"
+      ],
+      "10": [
+        "moa_2025_nov"
+      ],
+      "12": [
+        "moa_2025_jan"
+      ]
+    },
+    "category": "vegetable"
+  },
+  {
+    "slug": "potato",
+    "product": "马铃薯",
+    "variety": "冬作薯、春薯、秋薯",
+    "origin": "广东、云南、广西及北方一作区等",
+    "region": "全国市场观察",
+    "matureMonths": [
+      2
+    ],
+    "peakMonths": [
+      3,
+      6,
+      9
+    ],
+    "supplyMonths": [
+      5
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_mar_detail",
+      "moa_2025_jun",
+      "moa_2025_jul",
+      "moa_2025_oct_detail"
+    ],
+    "note": "2 月冬作薯开始采挖，3 月预计集中上市；6 月多产区春薯集中上市，9 月秋薯大量收获。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "2": [
+        "moa_2025_mar_detail"
+      ],
+      "3": [
+        "moa_2025_mar_detail"
+      ],
+      "5": [
+        "moa_2025_jun"
+      ],
+      "6": [
+        "moa_2025_jul"
+      ],
+      "9": [
+        "moa_2025_oct_detail"
+      ]
+    },
+    "category": "vegetable"
+  },
+  {
+    "slug": "tomato",
+    "product": "番茄",
+    "variety": "露地、冷棚及设施番茄",
+    "origin": "山东、四川、内蒙古等",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      9
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_apr_detail",
+      "moa_2025_may_detail",
+      "moa_2025_jun",
+      "moa_2025_jul",
+      "moa_2025_aug",
+      "moa_2025_oct_detail"
+    ],
+    "note": "多月有市场供应，但不同月份产地和生产方式转换；7 月换茬、9 月降雨影响供应。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "3": [
+        "moa_2025_apr_detail"
+      ],
+      "4": [
+        "moa_2025_may_detail"
+      ],
+      "5": [
+        "moa_2025_jun"
+      ],
+      "6": [
+        "moa_2025_jul"
+      ],
+      "7": [
+        "moa_2025_aug"
+      ],
+      "9": [
+        "moa_2025_oct_detail"
+      ]
+    },
+    "category": "vegetable"
+  },
+  {
+    "slug": "cucumber",
+    "product": "黄瓜",
+    "variety": "露地、冷棚及设施黄瓜",
+    "origin": "云南、山东及北方冷凉产区等",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_apr_detail",
+      "moa_2025_may_detail",
+      "moa_2025_jun",
+      "moa_2025_jul",
+      "moa_2025_aug",
+      "moa_2025_sep_detail",
+      "moa_2025_oct_detail"
+    ],
+    "note": "产地转换使供应跨季；7—9 月雨热与换茬会影响上市量，不能据此断定便宜。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "3": [
+        "moa_2025_apr_detail"
+      ],
+      "4": [
+        "moa_2025_may_detail"
+      ],
+      "5": [
+        "moa_2025_jun"
+      ],
+      "6": [
+        "moa_2025_jul"
+      ],
+      "7": [
+        "moa_2025_aug"
+      ],
+      "8": [
+        "moa_2025_sep_detail"
+      ],
+      "9": [
+        "moa_2025_oct_detail"
+      ]
+    },
+    "category": "vegetable"
+  },
+  {
+    "slug": "leafy-greens",
+    "product": "叶菜",
+    "variety": "油菜、生菜、菠菜等有记录的品种",
+    "origin": "南方与北方冷凉产区等",
+    "region": "全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_feb_veg",
+      "moa_2025_jun",
+      "moa_2025_jul",
+      "moa_2025_aug",
+      "moa_2025_sep_detail",
+      "moa_2025_nov",
+      "moa_2026_jan"
+    ],
+    "note": "本类只列资料中明确提及的品种；夏季高温多雨可造成阶段性紧张，不能把整类叶菜看作同一产季。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "1": [
+        "moa_2025_feb_veg"
+      ],
+      "5": [
+        "moa_2025_jun"
+      ],
+      "6": [
+        "moa_2025_jul"
+      ],
+      "7": [
+        "moa_2025_aug"
+      ],
+      "8": [
+        "moa_2025_sep_detail"
+      ],
+      "10": [
+        "moa_2025_nov"
+      ],
+      "12": [
+        "moa_2026_jan"
+      ]
+    },
+    "category": "vegetable"
   }
 ]

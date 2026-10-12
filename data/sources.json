@@ -180,5 +180,54 @@
     "published": "2026-01-20",
     "url": "https://www.agri.cn/sj/jcyj/202601/P020260121341589337713.pdf",
     "scope": "2025 年 12 月全国市场观察及随后预测；价格是批发口径"
+  },
+  "moa_2025_feb_veg": {
+    "title": "1 月蔬菜地头价环比上涨仍低于去年和常年，预计 2 月蔬菜供应充足",
+    "publisher": "农业农村部种植业管理司",
+    "published": "2025-02-10",
+    "url": "https://zzys.moa.gov.cn/gdxw/202502/t20250211_6469868.htm",
+    "scope": "2025 年 1 月大白菜、萝卜、油菜、芥菜生产观察"
+  },
+  "moa_2025_mar_detail": {
+    "title": "2025 年 2 月鲜活农产品供需形势分析月报",
+    "publisher": "农业农村部市场与信息化司",
+    "published": "2025-03-20",
+    "url": "https://www.agri.cn/sj/jcyj/202503/P020250325329665624850.pdf",
+    "scope": "2025 年 2 月冬季马铃薯采收及 3 月预测"
+  },
+  "moa_2025_apr_detail": {
+    "title": "2025 年 3 月鲜活农产品供需形势分析月报",
+    "publisher": "农业农村部市场与信息化司",
+    "published": "2025-04-20",
+    "url": "https://www.agri.cn/sj/jcyj/202504/P020250423539399155583.pdf",
+    "scope": "2025 年 3 月蔬菜产地转换及 4 月预测"
+  },
+  "moa_2025_may_detail": {
+    "title": "2025 年 4 月鲜活农产品供需形势分析月报",
+    "publisher": "农业农村部市场与信息化司",
+    "published": "2025-05-20",
+    "url": "https://www.agri.cn/sj/jcyj/202505/P020250530449500555597.pdf",
+    "scope": "2025 年 4 月蔬菜市场观察"
+  },
+  "moa_2025_sep_detail": {
+    "title": "2025 年 8 月鲜活农产品供需形势分析月报",
+    "publisher": "农业农村部市场与信息化司",
+    "published": "2025-09-20",
+    "url": "https://www.moa.gov.cn/ztzl/nybrl/rlxx/202509/P020250925364870524301.pdf",
+    "scope": "2025 年 8 月蔬菜市场观察；雨水影响价格和上市"
+  },
+  "moa_2025_oct_detail": {
+    "title": "2025 年 9 月鲜活农产品供需形势分析月报",
+    "publisher": "农业农村部市场与信息化司",
+    "published": "2025-10-20",
+    "url": "https://www.agri.cn/sj/jcyj/202510/P020251024329471516815.pdf",
+    "scope": "2025 年 9 月秋薯采收及蔬菜产地转换"
+  },
+  "moa_2025_nov_cabbage": {
+    "title": "菜价走高 如何稳住“菜篮子”",
+    "publisher": "中国农业农村信息网",
+    "published": "2025-11-14",
+    "url": "https://www.agri.cn/sc/scdt/202511/t20251114_8786178.htm",
+    "scope": "2025 年 11 月白菜上市与异常天气；不代表普遍低价"
   }
 }

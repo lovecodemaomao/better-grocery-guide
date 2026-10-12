@@ -16,6 +16,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '应季日历', link: '/calendar/' },
+      { text: '零售比价', link: '/compare/' },
       { text: '商品指南', link: '/produce/' },
       { text: '购买渠道', link: '/channels/' },
       { text: '成本计算', link: '/value/' }
