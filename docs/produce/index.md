@@ -14,6 +14,8 @@
 
 [荔枝](./lychee) · [芒果](./mango) · [杏](./apricot) · [甜瓜](./melon) · [猕猴桃](./kiwi)
 
+[李（李子、布林）](./plum) · [冬枣](./winter-jujube)
+
 ## 其他蔬菜样板
 
 [马铃薯](./potato) · [黄瓜](./cucumber) · [栽培食用菌](./mushrooms)

@@ -568,5 +568,212 @@
         "moa_2025_sep"
       ]
     }
+  },
+  {
+    "slug": "apple",
+    "product": "苹果",
+    "variety": "早熟苹果（未细分）",
+    "origin": "各产区",
+    "region": "2025 年全国市场预测",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      8
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_aug"
+    ],
+    "note": "7 月月报记录新产季早熟苹果陆续上市，并预计随后供应增加；8 月不是所有苹果品种的成熟期。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "8": [
+        "moa_2025_aug"
+      ]
+    }
+  },
+  {
+    "slug": "melon",
+    "product": "甜瓜",
+    "variety": "国产甜瓜（未细分）",
+    "origin": "各产区",
+    "region": "2025 年全国市场预测",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      8
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_aug"
+    ],
+    "note": "7 月月报预计甜瓜等夏果随后上市量继续增加；不等于全国固定成熟期。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "8": [
+        "moa_2025_aug"
+      ]
+    }
+  },
+  {
+    "slug": "plum",
+    "product": "李",
+    "variety": "国产鲜食李（未细分）",
+    "origin": "未限定",
+    "region": "2025 年全国市场预测",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      8
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_aug"
+    ],
+    "note": "7 月月报预计李等夏果随后上市量继续增加；品种与产区仍待细分。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "8": [
+        "moa_2025_aug"
+      ]
+    }
+  },
+  {
+    "slug": "winter-jujube",
+    "product": "冬枣",
+    "variety": "鲜食冬枣",
+    "origin": "未限定",
+    "region": "2025 年全国市场预测",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      8
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_aug"
+    ],
+    "note": "7 月月报预计冬枣等新产季水果随后陆续上市；鲜食冬枣不等于干制红枣。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "8": [
+        "moa_2025_aug"
+      ]
+    }
+  },
+  {
+    "slug": "apple",
+    "product": "苹果",
+    "variety": "新季富士及入库苹果",
+    "origin": "北方主产区",
+    "region": "2025 年全国市场预测",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      11
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_nov"
+    ],
+    "note": "10 月月报预计富士完成采收入库后的市场供应；不能把 11 月写成自然成熟期。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "11": [
+        "moa_2025_nov"
+      ]
+    }
+  },
+  {
+    "slug": "banana",
+    "product": "香蕉",
+    "variety": "广西、云南产区香蕉",
+    "origin": "广西、云南",
+    "region": "2025 年全国市场预测",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      11
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2025_nov"
+    ],
+    "note": "10 月月报预计香蕉供给从广西逐步转向云南；不推断全国统一成熟月。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "11": [
+        "moa_2025_nov"
+      ]
+    }
+  },
+  {
+    "slug": "apple",
+    "product": "苹果",
+    "variety": "库存苹果",
+    "origin": "各主产区",
+    "region": "2025 年全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      12
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2026_jan"
+    ],
+    "note": "12 月月报记录苹果是主要供应水果之一，主要为库存供应，不是产地新采。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "12": [
+        "moa_2026_jan"
+      ]
+    }
+  },
+  {
+    "slug": "pear",
+    "product": "梨",
+    "variety": "库存梨",
+    "origin": "各主产区",
+    "region": "2025 年全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      12
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2026_jan"
+    ],
+    "note": "12 月月报记录梨是主要供应水果之一，库存供应与新季采收不同。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "12": [
+        "moa_2026_jan"
+      ]
+    }
+  },
+  {
+    "slug": "strawberry",
+    "product": "草莓",
+    "variety": "辽宁、山东等地设施草莓",
+    "origin": "辽宁、山东等地",
+    "region": "2025 年全国市场观察",
+    "matureMonths": [],
+    "peakMonths": [],
+    "supplyMonths": [
+      12
+    ],
+    "evidenceYear": 2025,
+    "sourceIds": [
+      "moa_2026_jan"
+    ],
+    "note": "12 月月报记录辽宁丹东、山东济南等地设施草莓上市量增加；不是露地草莓的自然成熟期。",
+    "reviewedAt": "2026-10-13",
+    "sourceIdsByMonth": {
+      "12": [
+        "moa_2026_jan"
+      ]
+    }
   }
 ]
