@@ -12,7 +12,7 @@
     "supplyMonths": [
       1
     ],
-    "evidenceYear": 2024,
+    "evidenceYear": "2024—2025",
     "sourceIds": [
       "moa_2025_jan"
     ],
@@ -39,7 +39,7 @@
       12,
       1
     ],
-    "evidenceYear": 2024,
+    "evidenceYear": "2024—2025",
     "sourceIds": [
       "moa_2025_jan"
     ],
@@ -354,8 +354,7 @@
       4,
       5,
       10,
-      11,
-      12
+      11
     ],
     "evidenceYear": 2025,
     "sourceIds": [
@@ -388,9 +387,6 @@
       ],
       "11": [
         "moa_2025_nov"
-      ],
-      "12": [
-        "moa_2025_jan"
       ]
     }
   },
