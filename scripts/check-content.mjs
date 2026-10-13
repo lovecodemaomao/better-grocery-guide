@@ -3,6 +3,7 @@ import { resolve, dirname, extname } from 'node:path'
 
 const sources = JSON.parse(readFileSync('data/sources.json', 'utf8'))
 const seasons = JSON.parse(readFileSync('data/seasons.json', 'utf8'))
+const decisionCards = JSON.parse(readFileSync('data/decision-cards.json', 'utf8'))
 const qingpuReference = JSON.parse(readFileSync('data/qingpu-retail-reference.json', 'utf8'))
 const errors = []
 const validMonth = m => Number.isInteger(m) && m >= 1 && m <= 12
@@ -26,6 +27,12 @@ for (const [index, row] of seasons.entries()) {
     else for (const id of monthIds) if (!sources[id]) errors.push(`季节条目 ${index} 的 ${month} 月引用未知来源 ${id}`)
   }
   if (!existsSync(resolve(`docs/produce/${row.slug}.md`))) errors.push(`季节条目 ${index} 缺少商品页 ${row.slug}`)
+}
+for (const [slug, card] of Object.entries(decisionCards)) {
+  if (!existsSync(resolve(`docs/produce/${slug}.md`))) errors.push(`购买卡 ${slug} 缺少商品页`)
+  if (!seasons.some(row => row.slug === slug)) errors.push(`购买卡 ${slug} 缺少季节条目`)
+  for (const key of ['title', 'lead', 'check', 'channel', 'storage', 'quantity', 'onlineTag', 'stockTag']) if (typeof card[key] !== 'string' || !card[key].trim()) errors.push(`购买卡 ${slug} 缺少 ${key}`)
+  if (!readFileSync(resolve(`docs/produce/${slug}.md`), 'utf8').includes(`<BuyingCard product="${slug}"`)) errors.push(`商品页 ${slug} 未显示购买卡`)
 }
 for (let month = 1; month <= 12; month++) {
   for (const category of ['fruit', 'vegetable']) {

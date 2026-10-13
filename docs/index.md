@@ -2,35 +2,24 @@
 layout: home
 title: 高性价比生活采购指南
 hero:
-  name: 高性价比生活采购指南
-  text: 买得合适，存得住，少浪费
-  tagline: 从果蔬开始，整理有出处、能在购物时用上的建议。
+  name: 省心买菜
+  text: 今天买点什么？
+  tagline: 先缩小选择，再看挑选、数量和价格依据。
   actions:
     - theme: brand
-      text: 看本月采购线索
-      link: /calendar/
+      text: 看本月候选
+      link: /#this-month
     - theme: alt
-      text: 比较零售价格
-      link: /compare/
-    - theme: alt
-      text: 查商品
-      link: /produce/
-features:
-  - title: 看季节
-    details: 分清采收、集中上市和市场供应，留意产区差异。
-    link: /calendar/
-  - title: 看商品
-    details: 按品种、挑选、渠道和家庭保存方式做决定。
-    link: /produce/
-  - title: 算到手成本
-    details: 把运费、损耗和可食用部分算进去。
-    link: /compare/
+      text: 查青浦价格参考
+      link: /compare/reference
 ---
+
+<TaskNav />
 
 <CurrentMonth />
 
-## 开始阅读
+## 想自己多看一点
 
-先看[十二个月水果与蔬菜线索](/calendar/)，再用[零售比价](/compare/)比较同城同规格的到手价格。也可以用页面右上角搜索商品名称或别名。
+可以查[十二个月果蔬清单](/calendar/)、[商品指南](/produce/)和[购买渠道判断](/channels/)。页面右上角也能直接搜索商品名称或别名。[零售比价记录](/compare/)供愿意自己记价的读者使用。
 
 日历依据有日期的公开资料整理，**不是当年即时供应或价格承诺**。若某项尚无足够证据，会标出待核实。[阅读方法](/about) · [参与纠错](/contributing)

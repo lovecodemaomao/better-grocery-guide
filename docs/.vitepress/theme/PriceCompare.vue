@@ -33,7 +33,21 @@ const message = ref('')
 const products = ['苹果', '香蕉', '柑橘', '草莓', '番茄', '黄瓜', '白萝卜', '马铃薯', ...qingpuReference.items.map(item => item.product)]
 const cities = ['上海', '北京', '广州', '深圳']
 const kindLabel = { listing: '公开标价', checkout: '结算页到手价', paid: '实付价' }
-const rows = computed(() => city.value.trim() ? quotes.value.filter(q => q.city === city.value.trim() && q.district === district.value.trim() && q.product === product.value).map(q => ({ ...q, total: q.listedCny - q.discountCny + q.shippingCny, unit: (q.listedCny - q.discountCny + q.shippingCny) / q.weightKg, ageDays: Math.floor((Date.now() - new Date(`${q.observedAt}T00:00:00`).getTime()) / 86400000) })).sort((a, b) => a.unit - b.unit) : [])
+const rows = computed(() => city.value.trim() ? quotes.value.filter(q => q.city === city.value.trim() && q.district === district.value.trim() && q.product === product.value).map(q => ({ ...q, total: q.listedCny - q.discountCny + q.shippingCny, unit: (q.listedCny - q.discountCny + q.shippingCny) / q.weightKg, ageDays: Math.floor((Date.now() - new Date(`${q.observedAt}T00:00:00`).getTime()) / 86400000) })) : [])
+const groups = computed(() => {
+  const map = new Map<string, { variety: string, specification: string, priceKind: Quote['priceKind'], observedAt: string, quotes: typeof rows.value }>()
+  for (const quote of rows.value) {
+    const variety = quote.variety.trim() || '品种未注明'
+    const specification = quote.specification.trim()
+    const key = [variety, specification, quote.priceKind, quote.observedAt].join('\u0000')
+    if (!map.has(key)) map.set(key, { variety, specification, priceKind: quote.priceKind, observedAt: quote.observedAt, quotes: [] })
+    map.get(key)!.quotes.push(quote)
+  }
+  return [...map.values()].map(group => {
+    const comparable = group.quotes.length >= 2 && group.variety !== '品种未注明'
+    return { ...group, comparable, quotes: comparable ? group.quotes.sort((a, b) => a.unit - b.unit) : group.quotes }
+  })
+})
 const currentDate = ref('')
 const referenceItem = computed(() => city.value.trim() === '上海' && district.value.trim() === '青浦区' ? qingpuReference.items.find(item => item.product === product.value) : undefined)
 const referenceUpper = computed(() => referenceItem.value ? Math.max(referenceItem.value.cnyPer500g, ...qingpuReference.previousPeriods.map(period => period.prices[referenceItem.value!.product as keyof typeof period.prices])) * 2 : null)
@@ -67,14 +81,25 @@ function removeQuote(id: string) { quotes.value = quotes.value.filter(q => q.id 
       <label>区县<input v-model="district" placeholder="例如：青浦区" /></label>
       <label>商品<input v-model="product" list="produce-names" /></label>
     </div>
-    <p v-if="!rows.length" class="compare-empty">{{ city }}{{ district }}的{{ product }}还没有可比较的记录。可以从下方录入盒马、京东或其他平台的结算页价格。</p>
+    <p v-if="!rows.length" class="compare-empty">这台设备还没有{{ city }}{{ district }}的{{ product }}记录。先看<a :href="withBase('/compare/reference')">已有的青浦价格参考</a>；需要自己记价时再展开下方表单。</p>
     <p v-if="referenceUpper !== null" class="compare-privacy">青浦区近三期监测均价上沿：¥{{ referenceUpper.toFixed(2) }}/公斤（截至 2026-10-02，<span v-if="referenceStale">已过期，仅作历史参考</span><span v-else>仅作复核参考</span>）。<a :href="withBase('/compare/reference')">查看来源与范围</a>。</p>
-    <p v-if="rows.length" class="compare-privacy">手机上可横向滑动表格查看完整价格。</p>
-    <div v-if="rows.length" class="compare-table-wrap"><table><thead><tr><th>渠道与规格</th><th>价格口径</th><th>含优惠与运费合计</th><th>元/公斤</th><th>本地参考</th><th>记录</th></tr></thead><tbody>
-      <tr v-for="q in rows" :key="q.id"><td><strong>{{ q.channel }}</strong> · {{ q.product }} {{ q.variety }}<br /><small>{{ q.seller }} {{ q.specification }} · 净重 {{ q.weightKg }} 公斤</small><br /><small v-if="q.popularity">{{ q.popularity }}（不能直接当作销量）</small></td><td>{{ kindLabel[q.priceKind] }}</td><td>¥{{ q.total.toFixed(2) }}<br /><small>标价 {{ q.listedCny }} − 优惠 {{ q.discountCny }} + 运费 {{ q.shippingCny }}</small></td><td><strong>¥{{ q.unit.toFixed(2) }}</strong></td><td v-if="referenceUpper !== null"><small v-if="referenceStale">历史监测已过期，重查近期价</small><span v-else>约为三期均价上沿的 {{ (q.unit / referenceUpper).toFixed(1) }} 倍<br /><small v-if="q.unit / referenceUpper >= 2">差距较大，请核对规格与近期价</small><small v-else>仅供复核</small></span></td><td v-else><small>暂无同区单品参考</small></td><td>{{ q.observedAt }}<br /><small v-if="q.ageDays > 7">超过 7 天，请重新核价</small><small v-else>请在下单前复核</small><br /><a v-if="q.sourceUrl" :href="q.sourceUrl" target="_blank" rel="noopener noreferrer">查看来源</a><button class="remove-quote" type="button" @click="removeQuote(q.id)">删除</button></td></tr>
-    </tbody></table></div>
-    <h2>添加价格记录</h2>
-    <p>最好记录同一城市、同一品种和相近规格的价格。没有结算页信息时请选择“公开标价”，不要把页面评价数写成销量。</p>
+    <section v-for="(group, index) in groups" :key="index" class="quote-group">
+      <h3>{{ group.variety }} · {{ group.specification }} · {{ kindLabel[group.priceKind] }} · {{ group.observedAt }}</h3>
+      <p class="compare-privacy">{{ group.comparable ? '本组按元／公斤排序；仍需核对等级、卖家和配送条件。' : '同口径记录不足或品种未注明，暂不形成价格排名。' }}</p>
+      <div class="quote-grid">
+        <article v-for="q in group.quotes" :key="q.id" class="quote-card">
+          <div class="quote-card-top"><strong>{{ q.channel }}</strong><span>{{ kindLabel[q.priceKind] }}</span></div>
+          <p class="quote-card-price">¥{{ (q.unit / 2).toFixed(2) }}<small>／500 克</small></p>
+          <p class="quote-card-sub">¥{{ q.unit.toFixed(2) }}／公斤 · {{ q.observedAt }}</p>
+          <p v-if="q.ageDays > 7" class="quote-card-note">记录已超过 7 天，请重新核价。</p>
+          <p v-if="referenceUpper !== null && !referenceStale" class="quote-card-note">约为青浦历史监测上沿的 {{ (q.unit / referenceUpper).toFixed(1) }} 倍；先核对品质和规格。</p>
+          <details><summary>查看规格与计算</summary><p>{{ q.seller || '卖家未注明' }} · {{ q.specification }} · 净重 {{ q.weightKg }} 公斤</p><p>标价 ¥{{ q.listedCny }} − 优惠 ¥{{ q.discountCny }} + 运费 ¥{{ q.shippingCny }} = ¥{{ q.total.toFixed(2) }}</p><p v-if="q.popularity">页面热度：{{ q.popularity }}（不能直接当作销量）</p></details>
+          <div class="quote-card-actions"><a v-if="q.sourceUrl" :href="q.sourceUrl" target="_blank" rel="noopener noreferrer">查看来源</a><button class="remove-quote" type="button" @click="removeQuote(q.id)">删除记录</button></div>
+        </article>
+      </div>
+    </section>
+    <details class="quote-editor"><summary>自己记录价格（可选）</summary>
+    <p>这份详细表单供愿意留存报价的人使用。仅同一品种、规格、日期和价格口径的记录形成组内排序；页面评价数不能当作销量。</p>
     <form class="quote-form" @submit.prevent="addQuote">
       <label>城市<input v-model="form.city" list="first-tier-cities" placeholder="例如：上海" required /></label>
       <label>区县<input v-model="form.district" placeholder="例如：青浦区" required /></label>
@@ -93,13 +118,14 @@ function removeQuote(id: string) { quotes.value = quotes.value.filter(q => q.id 
       <label>热度信息<input v-model="form.popularity" placeholder="例如：页面显示 1 万+评价；选填" /></label>
       <button type="submit">保存并比较</button>
     </form>
+    <p class="compare-privacy">记录仅保存在当前浏览器，没有上传到项目或平台。清除浏览器数据会删除记录。</p>
+    </details>
     <datalist id="produce-names"><option v-for="name in products" :key="name" :value="name" /></datalist>
     <datalist id="first-tier-cities"><option v-for="name in cities" :key="name" :value="name" /></datalist>
     <p role="status">{{ message }}</p>
-    <p class="compare-privacy">记录仅保存在当前浏览器，没有上传到项目或平台。清除浏览器数据会删除记录。</p>
   </div>
 </template>
 
 <style scoped>
-.compare-controls,.quote-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;margin:18px 0}.price-compare label{display:grid;gap:5px;font-size:.9rem;font-weight:600}.price-compare input,.price-compare select{min-width:0;padding:8px 10px;border:1px solid var(--vp-c-divider);border-radius:8px;background:var(--vp-c-bg);color:var(--vp-c-text-1);font:inherit}.quote-form button{align-self:end;padding:10px;border:0;border-radius:8px;background:var(--vp-c-brand-1);color:#fff;font:inherit;cursor:pointer}.compare-empty{padding:16px;border-radius:10px;background:var(--vp-c-bg-soft)}.compare-table-wrap{overflow-x:auto}.compare-table-wrap table{width:100%;min-width:650px;display:table}.compare-table-wrap th,.compare-table-wrap td{vertical-align:top}.compare-table-wrap small{color:var(--vp-c-text-2)}.remove-quote{display:block;border:0;background:none;color:var(--vp-c-brand-1);padding:2px 0;cursor:pointer}.compare-privacy{font-size:.85rem;color:var(--vp-c-text-2)}
+.compare-controls,.quote-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;margin:18px 0}.price-compare label{display:grid;gap:5px;font-size:.9rem;font-weight:600}.price-compare input,.price-compare select{min-width:0;padding:8px 10px;border:1px solid var(--vp-c-divider);border-radius:8px;background:var(--vp-c-bg);color:var(--vp-c-text-1);font:inherit}.quote-form button{align-self:end;padding:10px;border:0;border-radius:8px;background:var(--vp-c-brand-1);color:#fff;font:inherit;cursor:pointer}.compare-empty{padding:16px;border-radius:10px;background:var(--vp-c-bg-soft)}.compare-privacy{font-size:.85rem;color:var(--vp-c-text-2)}.quote-group{margin:1.5rem 0}.quote-group h3{margin-bottom:.3rem}.quote-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.75rem}.quote-card{padding:1rem;border:1px solid var(--vp-c-divider);border-radius:12px;background:var(--vp-c-bg-soft)}.quote-card-top,.quote-card-actions{display:flex;justify-content:space-between;gap:.6rem}.quote-card-top span,.quote-card-sub,.quote-card-note{font-size:.8rem;color:var(--vp-c-text-2)}.quote-card-price{margin:.5rem 0 0;font-size:1.35rem;font-weight:700}.quote-card-price small{font-size:.75rem;font-weight:400}.quote-card-sub{margin:.1rem 0}.quote-card-note{margin:.3rem 0}.quote-card details{margin:.7rem 0;font-size:.85rem}.quote-card details p{margin:.3rem 0}.quote-card-actions{font-size:.8rem}.remove-quote{border:0;background:none;color:var(--vp-c-brand-1);padding:0;cursor:pointer}.quote-editor{margin:1.5rem 0;padding:1rem;border:1px solid var(--vp-c-divider);border-radius:12px}.quote-editor>summary{cursor:pointer;font-weight:700}
 </style>

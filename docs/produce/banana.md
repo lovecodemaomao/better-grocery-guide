@@ -5,6 +5,8 @@ description: 香蕉的成熟度、购买数量和运输判断
 
 # 香蕉
 
+<BuyingCard product="banana" />
+
 香蕉在不同产区接力供应。农业农村部月报记载，2024 年 12 月云南、广西香蕉大量上市；2025 年夏季报告描述海南采收高峰，10 月报告又预计随后供给从广西逐步转向云南。这些是**具体年份的观察和预测**，不能当作全国固定低价月份。[冬季资料](https://www.moa.gov.cn/ztzl/nybrl/rlxx/202501/P020250121502733317207.pdf) · [夏季资料](https://www.moa.gov.cn/ztzl/nybrl/rlxx/202507/P020250723527712077947.pdf) · [秋季资料](https://www.moa.gov.cn/ztzl/nybrl/rlxx/202511/P020251126387615008322.pdf)
 
 ## 购买时

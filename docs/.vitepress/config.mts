@@ -15,11 +15,17 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '应季日历', link: '/calendar/' },
-      { text: '零售比价', link: '/compare/' },
-      { text: '商品指南', link: '/produce/' },
-      { text: '购买渠道', link: '/channels/' },
-      { text: '成本计算', link: '/value/' }
+      { text: '今晚买菜', link: '/scenes/tonight' },
+      { text: '买水果', link: '/scenes/fruit' },
+      { text: '备点存货', link: '/scenes/stock' },
+      { text: '应季清单', link: '/calendar/' },
+      { text: '价格参考', link: '/compare/reference' },
+      { text: '更多', items: [
+        { text: '商品指南', link: '/produce/' },
+        { text: '购买渠道', link: '/channels/' },
+        { text: '零售比价记录', link: '/compare/' },
+        { text: '成本计算', link: '/value/' }
+      ] }
     ],
     sidebar: {
       '/compare/': [{ text: '零售比价', items: [

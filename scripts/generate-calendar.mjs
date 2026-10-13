@@ -22,9 +22,11 @@ for (let month = 1; month <= 12; month++) {
   const section = (category, label) => `## ${label}\n\n${rows[category].length ? rows[category].join('\n\n') : `暂无已核实的${label}条目。欢迎按[贡献规范](/contributing)补充资料。`}`
   const quickRow = (category, label) => {
     const selected = monthEntries(month).filter(entry => entry.category === category)
-    return `- **${label}**：采收／集中上市：${uniqueLinks(selected.filter(entry => ['产地采收', '集中上市'].includes(statusFor(entry, month))))}；其他市场供应：${uniqueLinks(selected.filter(entry => statusFor(entry, month) === '市场供应'))}。`
+    const ranked = selected.sort((a, b) => ['产地采收', '集中上市', '市场供应'].indexOf(statusFor(a, month)) - ['产地采收', '集中上市', '市场供应'].indexOf(statusFor(b, month)))
+    const options = [...new Map(ranked.map(entry => [entry.product, `${link(entry)}（${statusFor(entry, month)}）`])).values()]
+    return `- **${label}**：${options.join('、') || '暂无已核实条目'}。`
   }
-  const output = `---\ntitle: ${title}\n---\n\n# ${title}\n\n> 本页是有出处的历史供应线索，**不是今年实时行情或最低价榜**。同一商品的“采收、集中上市、市场供应”含义不同；到手品质和价格仍要结合本地情况。\n\n## 这个月先看什么\n\n${quickRow('fruit', '水果')}\n${quickRow('vegetable', '蔬菜')}\n\n“其他市场供应”包括库存、设施栽培和跨产区供应，**不代表本月自然成熟或价格更低**。选购时先确认品种、产地、外观和本地到手价；下方逐项列有资料年份、适用范围及来源。\n\n${section('fruit', '水果')}\n\n${section('vegetable', '蔬菜')}\n\n[返回全年日历](/calendar/) · [查看商品指南](/produce/) · [比较零售价格](/compare/)\n`
+  const output = `---\ntitle: ${title}\n---\n\n# ${title}\n\n## 这个月可以先看\n\n${quickRow('fruit', '水果')}\n${quickRow('vegetable', '蔬菜')}\n\n这些是有出处的历史供应线索，**不是今年实时行情或最低价榜**。“市场供应”可能来自库存、设施栽培和跨产区供应，不等于自然成熟。购买时核对产地、品质和本地到手价；下方逐项列出资料年份、适用范围与来源。\n\n${section('fruit', '水果')}\n\n${section('vegetable', '蔬菜')}\n\n[返回全年日历](/calendar/) · [查看商品指南](/produce/) · [比较零售价格](/compare/)\n`
   const path = resolve(`docs/calendar/${String(month).padStart(2, '0')}.md`)
   if (check) {
     if (readFileSync(path, 'utf8') !== output) throw new Error(`${path} 需要重新生成，请运行 npm run calendar`)

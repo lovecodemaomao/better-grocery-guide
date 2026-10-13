@@ -32,9 +32,6 @@ const result = computed(() => {
 <template>
   <div class="reference-check">
     <p v-if="stale" class="reference-stale">这批监测已超过 14 天，请先找近期价格。下表只保留历史参考。</p>
-    <div class="reference-table"><table><thead><tr><th>蔬菜</th><th>最新一期<br />元／500 克</th><th>近三期范围<br />元／公斤</th></tr></thead><tbody>
-      <tr v-for="row in reference.items" :key="row.product"><td>{{ row.product }}</td><td>{{ row.cnyPer500g.toFixed(2) }}</td><td>{{ rangeFor(row).low.toFixed(2) }}—{{ rangeFor(row).high.toFixed(2) }}</td></tr>
-    </tbody></table></div>
     <h2>拿到一个报价，快速算一算</h2>
     <p>选择同名蔬菜，填入平台或门店的价格和<strong>净重</strong>。结果与青浦区这期监测均价比较，仅用于提醒复核。</p>
     <div class="reference-fields">
@@ -53,6 +50,9 @@ const result = computed(() => {
     </div>
     <p v-else class="reference-note">填写有效的价格和净重后显示换算结果。优惠不能大于标价。</p>
     <p class="reference-note">“2 倍”按三期范围上沿计算，是本站的复核提醒线，<strong>不是市场公允价、最高限价或欺诈认定</strong>。最新监测期为 {{ reference.periodStart }}—{{ reference.periodEnd }}<span v-if="ageDays !== null">，截至今天已过去 {{ ageDays }} 天</span>；下单前须重新核价。</p>
+    <details class="reference-details"><summary>查看 12 种蔬菜的历史价格明细</summary><div class="reference-table"><table><thead><tr><th>蔬菜</th><th>最新一期<br />元／500 克</th><th>近三期范围<br />元／公斤</th></tr></thead><tbody>
+      <tr v-for="row in reference.items" :key="row.product"><td>{{ row.product }}</td><td>{{ row.cnyPer500g.toFixed(2) }}</td><td>{{ rangeFor(row).low.toFixed(2) }}—{{ rangeFor(row).high.toFixed(2) }}</td></tr>
+    </tbody></table></div></details>
   </div>
 </template>
 
@@ -67,4 +67,5 @@ const result = computed(() => {
 .reference-result p{margin:.5rem 0 0}
 .reference-stale{padding:10px;border-left:3px solid var(--vp-c-warning-1);background:var(--vp-c-warning-soft)}
 .reference-note{font-size:.85rem;color:var(--vp-c-text-2)}
+.reference-details{margin-top:1rem}.reference-details summary{cursor:pointer;font-weight:600}
 </style>
