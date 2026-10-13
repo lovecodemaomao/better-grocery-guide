@@ -23,7 +23,7 @@ const picks = computed(() => {
     if (entry.category !== category || chosen.has(entry.slug)) return false
     chosen.add(entry.slug)
     return true
-  }).slice(0, 2).map(entry => ({ ...entry, ...status(entry, current), card: cards[entry.slug as keyof typeof cards] })))
+  }).slice(0, 4).map(entry => ({ ...entry, ...status(entry, current), card: cards[entry.slug as keyof typeof cards] })))
 })
 </script>
 

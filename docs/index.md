@@ -7,12 +7,14 @@ hero:
   tagline: 先缩小选择，再看挑选、数量和价格依据。
   actions:
     - theme: brand
-      text: 看本月候选
-      link: /#this-month
+      text: 今晚先买什么
+      link: /#tonight
     - theme: alt
-      text: 查青浦价格参考
-      link: /compare/reference
+      text: 看本月果蔬
+      link: /#this-month
 ---
+
+<TonightPicks />
 
 <TaskNav />
 
