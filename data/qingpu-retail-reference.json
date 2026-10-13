@@ -1,0 +1,25 @@
+{
+  "city": "上海",
+  "district": "青浦区",
+  "periodStart": "2026-09-28",
+  "periodEnd": "2026-10-02",
+  "publishedAt": "2026-10-10",
+  "sample": "5 个农贸市场、1 个超市的监测均价",
+  "sourceUrl": "https://www.shqp.gov.cn/plan/fgw_gzdt/20261012/1396997.html",
+  "sourceChartUrl": "https://www.shqp.gov.cn/plan/plan/upload/202610/1012_072451_399.png",
+  "unit": "元/500克",
+  "items": [
+    { "product": "韭菜", "cnyPer500g": 5.58 },
+    { "product": "米苋", "cnyPer500g": 5.07 },
+    { "product": "蕹菜", "cnyPer500g": 4.99 },
+    { "product": "鸡毛菜", "cnyPer500g": 4.66 },
+    { "product": "杭白菜", "cnyPer500g": 4.19 },
+    { "product": "芹菜", "cnyPer500g": 5.33 },
+    { "product": "卷心菜", "cnyPer500g": 3.14 },
+    { "product": "大白菜", "cnyPer500g": 2.13 },
+    { "product": "草头", "cnyPer500g": 9.80 },
+    { "product": "青菜", "cnyPer500g": 3.83 },
+    { "product": "生菜", "cnyPer500g": 5.41 },
+    { "product": "菠菜", "cnyPer500g": 7.99 }
+  ]
+}

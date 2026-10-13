@@ -22,6 +22,11 @@ export default defineConfig({
       { text: '成本计算', link: '/value/' }
     ],
     sidebar: {
+      '/compare/': [{ text: '零售比价', items: [
+        { text: '录入与比较', link: '/compare/' },
+        { text: '青浦区价格参考', link: '/compare/reference' },
+        { text: '青浦区采集进度', link: '/compare/qingpu' }
+      ] }],
       '/calendar/': [{ text: '应季采购', items: [
         { text: '说明', link: '/calendar/' },
         ...Array.from({ length: 12 }, (_, i) => ({ text: `${i + 1} 月`, link: `/calendar/${String(i + 1).padStart(2, '0')}` }))

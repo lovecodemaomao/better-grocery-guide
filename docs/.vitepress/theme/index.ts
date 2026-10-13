@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import CurrentMonth from './CurrentMonth.vue'
 import PriceCompare from './PriceCompare.vue'
+import ReferenceCheck from './ReferenceCheck.vue'
 import './custom.css'
 
 export default {
@@ -8,5 +9,6 @@ export default {
   enhanceApp({ app }) {
     app.component('CurrentMonth', CurrentMonth)
     app.component('PriceCompare', PriceCompare)
+    app.component('ReferenceCheck', ReferenceCheck)
   }
 }
