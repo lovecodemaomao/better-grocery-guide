@@ -5,7 +5,7 @@ description: 青浦区逐品种零售监测均价与报价复核工具
 
 # 青浦区果蔬价格参考
 
-这是一份**有日期的零售监测快照**，让采购者先知道普通蔬菜大致在什么价位。数据来自[青浦区发展改革委 2026 年 9 月 28 日—10 月 2 日监测](https://www.shqp.gov.cn/plan/fgw_gzdt/20261012/1396997.html)：5 个农贸市场、1 个超市的均价。[原始逐品种表](https://www.shqp.gov.cn/plan/plan/upload/202610/1012_072451_399.png)列出以下 12 种绿叶菜。**不是盒马、京东或任何单店的成交价，也不是今天的报价。**
+这是一份**有日期的零售监测快照**，让采购者先知道普通蔬菜大致在什么价位。数据来自青浦区发展改革委连续三期监测：[9 月 14—18 日](https://www.shqp.gov.cn/shqp/ggfw/mszt/scfw/zfsp/20260929/1396395.html)、[9 月 21—25 日](https://www.shqp.gov.cn/plan/fgw_gzdt/20261004/1396572.html)、[9 月 28 日—10 月 2 日](https://www.shqp.gov.cn/plan/fgw_gzdt/20261012/1396997.html)，每期均为 5 个农贸市场、1 个超市的监测均价。三期[原始逐品种表：第一期](https://www.shqp.gov.cn/shqp/shqp/upload/202609/0929_155953_838.png)、[第二期](https://www.shqp.gov.cn/plan/plan/upload/202610/1004_093322_122.png)、[第三期](https://www.shqp.gov.cn/plan/plan/upload/202610/1012_072451_399.png)均列出下方 12 种绿叶菜。表中的“范围”是**三期均价的最小值至最大值**，不是商店价格的上下限。**不是盒马、京东或任何单店的成交价，也不是今天的报价。**
 
 <ReferenceCheck />
 

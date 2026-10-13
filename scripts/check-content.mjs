@@ -10,6 +10,7 @@ const validMonth = m => Number.isInteger(m) && m >= 1 && m <= 12
 if (qingpuReference.city !== '上海' || qingpuReference.district !== '青浦区' || !qingpuReference.periodStart || !qingpuReference.periodEnd || !qingpuReference.sourceUrl.startsWith('https://') || !qingpuReference.sourceChartUrl.startsWith('https://')) errors.push('青浦价格参考缺少地区、时间或直接来源')
 if (qingpuReference.periodStart > qingpuReference.periodEnd) errors.push('青浦价格参考日期顺序无效')
 if (!Array.isArray(qingpuReference.items) || qingpuReference.items.length !== 12 || new Set(qingpuReference.items.map(item => item.product)).size !== qingpuReference.items.length || qingpuReference.items.some(item => !item.product || !Number.isFinite(item.cnyPer500g) || item.cnyPer500g <= 0)) errors.push('青浦价格参考逐品种数据无效')
+if (!Array.isArray(qingpuReference.previousPeriods) || qingpuReference.previousPeriods.length !== 2 || qingpuReference.previousPeriods.some(period => !period.periodStart || !period.periodEnd || period.periodStart > period.periodEnd || period.periodEnd >= qingpuReference.periodStart || !period.sourceUrl?.startsWith('https://') || !period.sourceChartUrl?.startsWith('https://') || qingpuReference.items.some(item => !Number.isFinite(period.prices?.[item.product]) || period.prices[item.product] <= 0))) errors.push('青浦价格参考历史期次缺少完整逐品种数据')
 for (const [id, source] of Object.entries(sources)) {
   if (!source.title || !source.publisher || !source.published || !/^https:\/\//.test(source.url) || !source.scope) errors.push(`来源 ${id} 缺少必要字段`)
 }

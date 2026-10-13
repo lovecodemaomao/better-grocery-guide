@@ -8,6 +8,22 @@
   "sourceUrl": "https://www.shqp.gov.cn/plan/fgw_gzdt/20261012/1396997.html",
   "sourceChartUrl": "https://www.shqp.gov.cn/plan/plan/upload/202610/1012_072451_399.png",
   "unit": "元/500克",
+  "previousPeriods": [
+    {
+      "periodStart": "2026-09-14",
+      "periodEnd": "2026-09-18",
+      "sourceUrl": "https://www.shqp.gov.cn/shqp/ggfw/mszt/scfw/zfsp/20260929/1396395.html",
+      "sourceChartUrl": "https://www.shqp.gov.cn/shqp/shqp/upload/202609/0929_155953_838.png",
+      "prices": { "韭菜": 5.00, "米苋": 4.93, "蕹菜": 5.13, "鸡毛菜": 4.80, "杭白菜": 4.40, "芹菜": 5.36, "卷心菜": 3.06, "大白菜": 2.13, "草头": 9.67, "青菜": 4.25, "生菜": 6.31, "菠菜": 9.12 }
+    },
+    {
+      "periodStart": "2026-09-21",
+      "periodEnd": "2026-09-25",
+      "sourceUrl": "https://www.shqp.gov.cn/plan/fgw_gzdt/20261004/1396572.html",
+      "sourceChartUrl": "https://www.shqp.gov.cn/plan/plan/upload/202610/1004_093322_122.png",
+      "prices": { "韭菜": 5.10, "米苋": 4.96, "蕹菜": 4.91, "鸡毛菜": 4.65, "杭白菜": 4.28, "芹菜": 5.48, "卷心菜": 3.24, "大白菜": 2.21, "草头": 10.38, "青菜": 4.08, "生菜": 6.02, "菠菜": 8.96 }
+    }
+  ],
   "items": [
     { "product": "韭菜", "cnyPer500g": 5.58 },
     { "product": "米苋", "cnyPer500g": 5.07 },

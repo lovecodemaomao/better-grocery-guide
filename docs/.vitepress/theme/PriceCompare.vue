@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
+import { withBase } from 'vitepress'
+import qingpuReference from '../../../data/qingpu-retail-reference.json'
 
 type Quote = {
   id: string
@@ -28,11 +30,16 @@ const district = ref('青浦区')
 const product = ref('苹果')
 const form = ref({ city: '上海', district: '青浦区', product: '苹果', variety: '', channel: '京东', seller: '', specification: '', weightKg: '', listedCny: '', discountCny: '0', shippingCny: '0', observedAt: today(), priceKind: 'listing' as Quote['priceKind'], sourceUrl: '', popularity: '' })
 const message = ref('')
-const products = ['苹果', '香蕉', '柑橘', '草莓', '番茄', '黄瓜', '大白菜', '白萝卜', '马铃薯']
+const products = ['苹果', '香蕉', '柑橘', '草莓', '番茄', '黄瓜', '白萝卜', '马铃薯', ...qingpuReference.items.map(item => item.product)]
 const cities = ['上海', '北京', '广州', '深圳']
 const kindLabel = { listing: '公开标价', checkout: '结算页到手价', paid: '实付价' }
 const rows = computed(() => city.value.trim() ? quotes.value.filter(q => q.city === city.value.trim() && q.district === district.value.trim() && q.product === product.value).map(q => ({ ...q, total: q.listedCny - q.discountCny + q.shippingCny, unit: (q.listedCny - q.discountCny + q.shippingCny) / q.weightKg, ageDays: Math.floor((Date.now() - new Date(`${q.observedAt}T00:00:00`).getTime()) / 86400000) })).sort((a, b) => a.unit - b.unit) : [])
+const currentDate = ref('')
+const referenceItem = computed(() => city.value.trim() === '上海' && district.value.trim() === '青浦区' ? qingpuReference.items.find(item => item.product === product.value) : undefined)
+const referenceUpper = computed(() => referenceItem.value ? Math.max(referenceItem.value.cnyPer500g, ...qingpuReference.previousPeriods.map(period => period.prices[referenceItem.value!.product as keyof typeof period.prices])) * 2 : null)
+const referenceStale = computed(() => currentDate.value ? (Date.parse(`${currentDate.value}T00:00:00Z`) - Date.parse(`${qingpuReference.periodEnd}T00:00:00Z`)) / 86400000 > 14 : false)
 onMounted(() => {
+  currentDate.value = today()
   form.value.observedAt = today()
   try {
     const saved = JSON.parse(localStorage.getItem(key) || localStorage.getItem(previousKey) || '[]')
@@ -61,9 +68,10 @@ function removeQuote(id: string) { quotes.value = quotes.value.filter(q => q.id 
       <label>商品<input v-model="product" list="produce-names" /></label>
     </div>
     <p v-if="!rows.length" class="compare-empty">{{ city }}{{ district }}的{{ product }}还没有可比较的记录。可以从下方录入盒马、京东或其他平台的结算页价格。</p>
+    <p v-if="referenceUpper !== null" class="compare-privacy">青浦区近三期监测均价上沿：¥{{ referenceUpper.toFixed(2) }}/公斤（截至 2026-10-02，<span v-if="referenceStale">已过期，仅作历史参考</span><span v-else>仅作复核参考</span>）。<a :href="withBase('/compare/reference')">查看来源与范围</a>。</p>
     <p v-if="rows.length" class="compare-privacy">手机上可横向滑动表格查看完整价格。</p>
-    <div v-if="rows.length" class="compare-table-wrap"><table><thead><tr><th>渠道与规格</th><th>价格口径</th><th>含优惠与运费合计</th><th>元/公斤</th><th>记录</th></tr></thead><tbody>
-      <tr v-for="q in rows" :key="q.id"><td><strong>{{ q.channel }}</strong> · {{ q.product }} {{ q.variety }}<br /><small>{{ q.seller }} {{ q.specification }} · 净重 {{ q.weightKg }} 公斤</small><br /><small v-if="q.popularity">{{ q.popularity }}（不能直接当作销量）</small></td><td>{{ kindLabel[q.priceKind] }}</td><td>¥{{ q.total.toFixed(2) }}<br /><small>标价 {{ q.listedCny }} − 优惠 {{ q.discountCny }} + 运费 {{ q.shippingCny }}</small></td><td><strong>¥{{ q.unit.toFixed(2) }}</strong></td><td>{{ q.observedAt }}<br /><small v-if="q.ageDays > 7">超过 7 天，请重新核价</small><small v-else>请在下单前复核</small><br /><a v-if="q.sourceUrl" :href="q.sourceUrl" target="_blank" rel="noopener noreferrer">查看来源</a><button class="remove-quote" type="button" @click="removeQuote(q.id)">删除</button></td></tr>
+    <div v-if="rows.length" class="compare-table-wrap"><table><thead><tr><th>渠道与规格</th><th>价格口径</th><th>含优惠与运费合计</th><th>元/公斤</th><th>本地参考</th><th>记录</th></tr></thead><tbody>
+      <tr v-for="q in rows" :key="q.id"><td><strong>{{ q.channel }}</strong> · {{ q.product }} {{ q.variety }}<br /><small>{{ q.seller }} {{ q.specification }} · 净重 {{ q.weightKg }} 公斤</small><br /><small v-if="q.popularity">{{ q.popularity }}（不能直接当作销量）</small></td><td>{{ kindLabel[q.priceKind] }}</td><td>¥{{ q.total.toFixed(2) }}<br /><small>标价 {{ q.listedCny }} − 优惠 {{ q.discountCny }} + 运费 {{ q.shippingCny }}</small></td><td><strong>¥{{ q.unit.toFixed(2) }}</strong></td><td v-if="referenceUpper !== null"><small v-if="referenceStale">历史监测已过期，重查近期价</small><span v-else>约为三期均价上沿的 {{ (q.unit / referenceUpper).toFixed(1) }} 倍<br /><small v-if="q.unit / referenceUpper >= 2">差距较大，请核对规格与近期价</small><small v-else>仅供复核</small></span></td><td v-else><small>暂无同区单品参考</small></td><td>{{ q.observedAt }}<br /><small v-if="q.ageDays > 7">超过 7 天，请重新核价</small><small v-else>请在下单前复核</small><br /><a v-if="q.sourceUrl" :href="q.sourceUrl" target="_blank" rel="noopener noreferrer">查看来源</a><button class="remove-quote" type="button" @click="removeQuote(q.id)">删除</button></td></tr>
     </tbody></table></div>
     <h2>添加价格记录</h2>
     <p>最好记录同一城市、同一品种和相近规格的价格。没有结算页信息时请选择“公开标价”，不要把页面评价数写成销量。</p>
