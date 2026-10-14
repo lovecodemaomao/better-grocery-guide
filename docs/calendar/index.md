@@ -51,8 +51,8 @@
 
 ## [10 月](./10)
 
-- **水果**：采收／集中上市：[苹果](/produce/apple)、[柑橘](/produce/citrus)；其他市场供应：[梨](/produce/pear)。
-- **蔬菜**：采收／集中上市：暂无已核实条目；其他市场供应：[大白菜](/produce/cabbage)、[菜花](/produce/cauliflower)、[叶菜](/produce/leafy-greens)。
+- **水果**：采收／集中上市：[苹果](/produce/apple)、[柑橘](/produce/citrus)；其他市场供应：[梨](/produce/pear)、[香蕉](/produce/banana)。
+- **蔬菜**：采收／集中上市：[马铃薯](/produce/potato)；其他市场供应：[大白菜](/produce/cabbage)、[菜花](/produce/cauliflower)、[叶菜](/produce/leafy-greens)。
 
 ## [11 月](./11)
 
