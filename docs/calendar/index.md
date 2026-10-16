@@ -22,7 +22,7 @@
 ## [4 月](./04)
 
 - **水果**：采收／集中上市：暂无已核实条目；其他市场供应：[苹果](/produce/apple)、[樱桃](/produce/cherry)、[西瓜](/produce/watermelon)、[梨](/produce/pear)。
-- **蔬菜**：采收／集中上市：暂无已核实条目；其他市场供应：[菜花](/produce/cauliflower)、[番茄](/produce/tomato)、[黄瓜](/produce/cucumber)。
+- **蔬菜**：采收／集中上市：暂无已核实条目；其他市场供应：[菜花](/produce/cauliflower)、[马铃薯](/produce/potato)、[番茄](/produce/tomato)、[黄瓜](/produce/cucumber)。
 
 ## [5 月](./05)
 
@@ -42,7 +42,7 @@
 ## [8 月](./08)
 
 - **水果**：采收／集中上市：[葡萄](/produce/grape)、[猕猴桃](/produce/kiwi)；其他市场供应：[西瓜](/produce/watermelon)、[苹果](/produce/apple)、[甜瓜](/produce/melon)、[李](/produce/plum)、[冬枣](/produce/winter-jujube)。
-- **蔬菜**：采收／集中上市：暂无已核实条目；其他市场供应：[白萝卜](/produce/radish)、[黄瓜](/produce/cucumber)、[叶菜](/produce/leafy-greens)。
+- **蔬菜**：采收／集中上市：[马铃薯](/produce/potato)；其他市场供应：[白萝卜](/produce/radish)、[黄瓜](/produce/cucumber)、[叶菜](/produce/leafy-greens)。
 
 ## [9 月](./09)
 
