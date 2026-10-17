@@ -1190,6 +1190,22 @@
     "category": "fruit"
   },
   {
+    "slug": "kiwi",
+    "product": "猕猴桃",
+    "variety": "陕西武功县产猕猴桃，报道未细分品种",
+    "origin": "陕西省咸阳市武功县",
+    "region": "仅为武功县 2025 年采收案例，不代表全国统一成熟期",
+    "matureMonths": [10],
+    "peakMonths": [],
+    "supplyMonths": [],
+    "evidenceYear": 2025,
+    "sourceIds": ["agri_wugong_kiwi_2025"],
+    "note": "10 月 10 日当地举行开采仪式；报道同时指出当年天气影响产量。仅提示留意实际产地和批次，不推断今年价格。",
+    "reviewedAt": "2026-10-17",
+    "sourceIdsByMonth": {"10": ["agri_wugong_kiwi_2025"]},
+    "category": "fruit"
+  },
+  {
     "slug": "carrot",
     "product": "胡萝卜",
     "variety": "冬储胡萝卜",
