@@ -1268,5 +1268,21 @@
     "reviewedAt": "2026-10-13",
     "sourceIdsByMonth": {"1": ["moa_2025_winter_storage"], "2": ["moa_2025_winter_storage"], "3": ["moa_2025_winter_storage"], "11": ["moa_2025_winter_storage"], "12": ["moa_2025_winter_storage"]},
     "category": "vegetable"
+  },
+  {
+    "slug": "persimmon",
+    "product": "柿子",
+    "variety": "云南施甸甜柿、北京房山和平谷部分采摘园柿子",
+    "origin": "云南省保山市施甸县复兴村；北京市房山区、平谷区",
+    "region": "仅为所列产区及 2025 年报道的采收案例，不代表全国或全部品种",
+    "matureMonths": [10, 11],
+    "peakMonths": [],
+    "supplyMonths": [],
+    "evidenceYear": 2025,
+    "sourceIds": ["shidian_persimmon_2025", "beijing_persimmon_2025"],
+    "note": "施甸复兴村甜柿在 10 月集中采摘；北京部分采摘园列出的成熟期为 10 月中下旬至 11 月中旬。具体到店批次、品质和零售价需当时核对。",
+    "reviewedAt": "2026-10-21",
+    "sourceIdsByMonth": {"10": ["shidian_persimmon_2025", "beijing_persimmon_2025"], "11": ["beijing_persimmon_2025"]},
+    "category": "fruit"
   }
 ]

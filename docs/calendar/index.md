@@ -51,12 +51,12 @@
 
 ## [10 月](./10)
 
-- **水果**：采收／集中上市：[苹果](/produce/apple)、[柑橘](/produce/citrus)、[猕猴桃](/produce/kiwi)；其他市场供应：[梨](/produce/pear)、[香蕉](/produce/banana)。
+- **水果**：采收／集中上市：[苹果](/produce/apple)、[柑橘](/produce/citrus)、[猕猴桃](/produce/kiwi)、[柿子](/produce/persimmon)；其他市场供应：[梨](/produce/pear)、[香蕉](/produce/banana)。
 - **蔬菜**：采收／集中上市：[马铃薯](/produce/potato)；其他市场供应：[大白菜](/produce/cabbage)、[菜花](/produce/cauliflower)、[叶菜](/produce/leafy-greens)。
 
 ## [11 月](./11)
 
-- **水果**：采收／集中上市：暂无已核实条目；其他市场供应：[梨](/produce/pear)、[柑橘](/produce/citrus)、[苹果](/produce/apple)、[香蕉](/produce/banana)。
+- **水果**：采收／集中上市：[柿子](/produce/persimmon)；其他市场供应：[梨](/produce/pear)、[柑橘](/produce/citrus)、[苹果](/produce/apple)、[香蕉](/produce/banana)。
 - **蔬菜**：采收／集中上市：暂无已核实条目；其他市场供应：[大白菜](/produce/cabbage)、[胡萝卜](/produce/carrot)、[洋葱](/produce/onion)、[南瓜](/produce/pumpkin)、[冬瓜](/produce/winter-melon)。
 
 ## [12 月](./12)
@@ -70,4 +70,4 @@
 - **集中上市**：资料明确提到上市量增多；集中上市不保证零售价最低。
 - **市场供应**：可能来自库存、设施栽培或其他产区，适合补充日常采购选择。
 
-每月页面还会给出水果、蔬菜的完整线索和直接来源。做采购决定时，结合[同城零售比价](/compare/)和实际品质。资料核实：2026-10-13。
+每月页面还会给出水果、蔬菜的完整线索和直接来源。做采购决定时，结合[同城零售比价](/compare/)和实际品质。资料核实：2026-10-21。
